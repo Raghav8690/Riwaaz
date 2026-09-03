@@ -1,0 +1,141 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Royal Heritage Palette */
+  --heritage-ivory: #FFF8E7;
+  --heritage-cream: #FDF6E3;
+  --heritage-burgundy: #4A0E0E;
+  --heritage-burgundy-light: #6B1A1A;
+  --heritage-gold: #C8A96A;
+  --heritage-gold-light: #E8D5A8;
+  --heritage-gold-dark: #8B7340;
+  --heritage-charcoal: #1A1A1A;
+  --heritage-teal: #0F3A3A;
+  --heritage-sindoor: #A91D3A;
+
+  --background: var(--heritage-ivory);
+  --foreground: var(--heritage-charcoal);
+  --card: #FFFFFF;
+  --card-foreground: var(--heritage-charcoal);
+  --popover: #FFFFFF;
+  --popover-foreground: var(--heritage-charcoal);
+  --primary: var(--heritage-burgundy);
+  --primary-foreground: var(--heritage-ivory);
+  --secondary: var(--heritage-cream);
+  --secondary-foreground: var(--heritage-charcoal);
+  --muted: #F5EFE0;
+  --muted-foreground: #6B5B4F;
+  --accent: var(--heritage-gold);
+  --accent-foreground: var(--heritage-charcoal);
+  --destructive: var(--heritage-sindoor);
+  --destructive-foreground: #FFF;
+  --border: #E8DDC4;
+  --input: #E8DDC4;
+  --ring: var(--heritage-gold);
+  --radius: 0.75rem;
+  --chart-1: var(--heritage-burgundy);
+  --chart-2: var(--heritage-gold);
+  --chart-3: var(--heritage-teal);
+  --chart-4: #8B7355;
+  --chart-5: #D4A574;
+  --sidebar: var(--heritage-cream);
+  --sidebar-foreground: var(--heritage-charcoal);
+  --sidebar-primary: var(--heritage-burgundy);
+  --sidebar-primary-foreground: var(--heritage-ivory);
+  --sidebar-accent: var(--heritage-gold);
+  --sidebar-accent-foreground: var(--heritage-charcoal);
+  --sidebar-border: #E8DDC4;
+  --sidebar-ring: var(--heritage-gold);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --font-display: var(--font-cormorant);
+  --font-body: var(--font-montserrat);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-montserrat), system-ui, sans-serif;
+  }
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-cormorant), serif;
+    @apply tracking-tight;
+  }
+}
+
+/* Lenis recommended CSS */
+html.lenis, html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+/* Heritage ornament utilities */
+.gold-hairline {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--heritage-gold), transparent);
+}
+.gold-border-double {
+  border: 1px solid var(--heritage-gold);
+  outline: 1px solid var(--heritage-gold);
+  outline-offset: 3px;
+}
+.text-gold-shimmer {
+  background: linear-gradient(90deg, var(--heritage-gold-dark), var(--heritage-gold), var(--heritage-gold-light), var(--heritage-gold));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.jharokha-mask {
+  clip-path: url(#jharokha-clip);
+}
