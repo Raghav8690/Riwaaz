@@ -1,12 +1,11 @@
 name = "riwaaz"
+main = ".open-next/worker.js"
 compatibility_date = "2025-03-01"
 compatibility_flags = ["nodejs_compat"]
-
-[vars]
-SHEETS_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRqD3n6XJkzZ-Slx1yl5aDab-7LWV2ZCxqww45rRWKPAh0ISMSvNXYVBvwjthKv1ujMTbm4WXmI2fXG/pub?output=csv"
-
-main = ".open-next/worker.js"
 
 [assets]
 directory = ".open-next/assets"
 not_found_handling = "single-page-application"
+
+[vars]
+SHEETS_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRqD3n6XJkzZ-Slx1yl5aDab-7LWV2ZCxqww45rRWKPAh0ISMSvNXYVBvwjthKv1ujMTbm4WXmI2fXG/pub?output=csv"
