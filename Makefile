@@ -10,7 +10,7 @@ help:
 	@echo "  install      Install dependencies (npm install)"
 	@echo "  dev          Run dev server (http://localhost:3000)"
 	@echo "  build        Production build (next build)"
-	@echo "  pages-build  Cloudflare Pages build (next-on-pages)"
+	@echo "  pages-build  Cloudflare Pages build (opennext)"
 	@echo "  start        Serve production build (next start)"
 	@echo "  lint         Run ESLint"
 	@echo "  clean        Remove .next, out, node_modules/.cache"

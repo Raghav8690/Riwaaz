@@ -1,5 +1,12 @@
 name = "riwaaz"
-compatibility_date = "2024-12-30"
+compatibility_date = "2025-03-01"
+compatibility_flags = ["nodejs_compat"]
 
 [vars]
 SHEETS_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRqD3n6XJkzZ-Slx1yl5aDab-7LWV2ZCxqww45rRWKPAh0ISMSvNXYVBvwjthKv1ujMTbm4WXmI2fXG/pub?output=csv"
+
+# OpenNext output – generated at build time
+# main = ".open-next/worker.js"  # managed by @opennextjs/cloudflare
+# [assets]
+# directory = ".open-next/assets"
+# binding = "ASSETS"
